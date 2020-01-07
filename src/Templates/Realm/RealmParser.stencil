@@ -1,0 +1,11 @@
+{% for type in types.classes|annotated:"RealmParser" %}
+// sourcery:file:Generated/RealmProperties
+{% set objectForCoding %}{{ type.name|lowerFirstWord }}{% endset %}
+// MARK: - {{ type.name }}Attributes
+enum {{ type.name }}Attributes: String {
+{% for variable in type.storedVariables %}
+	case {{ variable.name }} = "{{ variable.name }}"
+{% endfor %}
+}
+// sourcery:end
+{% endfor %}
