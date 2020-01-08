@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -128,11 +128,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CEF38A1023C5C20C00ADF8A5 /* Build configuration list for PBXNativeTarget "SDOSStencil" */;
 			buildPhases = (
+				CEF38A1723C5C8B600ADF8A5 /* SDOSStencil */,
 				0101DA3A5DA75A519832299F /* [CP] Check Pods Manifest.lock */,
 				CEF389F823C5C20B00ADF8A5 /* Sources */,
 				CEF389F923C5C20B00ADF8A5 /* Frameworks */,
 				CEF389FA23C5C20B00ADF8A5 /* Resources */,
-				CEF38A1723C5C8B600ADF8A5 /* SDOSStencil */,
 				36FDA567AA31A195549115D9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (

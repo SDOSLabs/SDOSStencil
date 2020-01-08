@@ -43,8 +43,9 @@ La carpeta de `Generated` debe estar creada antes de ejecutar el `script`.
 
 ***
 
-6. Una vez realicemos lo anterior es necesario realizar un primer `Build` al proyecto. Si todo está correcto dentro de la carpeta que hayamos creado en el proyecto se generaran ficheros basándonos en los recursos que le hayamos proporcionado.
-7. Es necesario añadir manualmente los recursos generados dentro de la carpeta `Generated` al proyecto, ya que solo tendremos visibilidad de estos desde el `Finder`. Para hacerlo hacer lo siguiente:
+6. Debemos mover el nuevo script que acabamos de crear en primer lugar, ya que se debe ejecutar lo primero cada vez que hagamos `Build`. (Debajo de `Dependencies` o `Target Dependencies`).
+7. Una vez realicemos lo anterior es necesario realizar un primer `Build` al proyecto. Si todo está correcto dentro de la carpeta que hayamos creado en el proyecto se generaran ficheros basándonos en los recursos que le hayamos proporcionado.
+8. Es necesario añadir manualmente los recursos generados dentro de la carpeta `Generated` al proyecto, ya que solo tendremos visibilidad de estos desde el `Finder`. Para hacerlo hacer lo siguiente:
    1. Click derecho en la carpeta de `Generated`.
    2. Add files to `"{nuesttro target}"`.
    3. Click en la/las carpetas que nos ha generado y pulsar en **`Add`**.
