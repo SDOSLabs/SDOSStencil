@@ -55,7 +55,7 @@ La carpeta de `Generated` debe estar creada antes de ejecutar el `script`.
 Usaremos [CocoaPods](https://cocoapods.org). Hay que añadir la dependencia al `Podfile`:
 
 ```ruby
-    pod `SDOSStencil`, `~&gt; 0.0.1`
+    pod `SDOSStencil`, `~> 0.0.1`
 ```
 
 ## Cómo se usa
