@@ -1,0 +1,23 @@
+PODS:
+  - SDOSStencil (0.0.1):
+    - Sourcery (~> 0.17.0)
+  - Sourcery (0.17.0)
+
+DEPENDENCIES:
+  - SDOSStencil (from `../../`)
+
+SPEC REPOS:
+  trunk:
+    - Sourcery
+
+EXTERNAL SOURCES:
+  SDOSStencil:
+    :path: "../../"
+
+SPEC CHECKSUMS:
+  SDOSStencil: e48b97ff56c94831d3941c2214c23c34ba1bea17
+  Sourcery: 3ed61be7c8a1218fce349266139379dba477efe0
+
+PODFILE CHECKSUM: f015519ce4424e389552af040b4f4bbaeb6b97d3
+
+COCOAPODS: 1.8.4

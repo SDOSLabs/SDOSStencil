@@ -1,5 +1,5 @@
 {% for type in types.classes|annotated:"RealmParser" %}
-// sourcery:file:Generated/RealmProperties
+// sourcery:file:RealmProperties/RealmProperties
 {% set objectForCoding %}{{ type.name|lowerFirstWord }}{% endset %}
 // MARK: - {{ type.name }}Attributes
 enum {{ type.name }}Attributes: String {

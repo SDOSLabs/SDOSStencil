@@ -14,7 +14,7 @@ Pod::Spec.new do |spec|
 
   spec.source       = { :git => "https://github.com/SDOSLabs/SDOSStencil.git", :tag => "#{spec.version}" }
 
-  spec.preserve_paths = "src/Templates/*"
+  spec.preserve_paths = "src/Templates/**"
 
   spec.dependency "Sourcery", "~> 0.17.0"
 
