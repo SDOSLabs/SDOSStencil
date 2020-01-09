@@ -38,7 +38,7 @@ Hay que lanzar un script cada vez que se builde el proyecto para así evitar ten
 4. Copiamos el siguiente script:
 
 ```sh
-    "${PODS_ROOT}/Sourcery/bin/sourcery" --sources "SDOSStencil/RealmModels" --templates "${PODS_ROOT}/SDOSStencil/src/Templates/Realm/" --output "SDOSStencil/Generated/"
+    "${SRCROOT}/Pods/Sourcery/bin/sourcery" --sources "SDOSStencil/RealmModels" --templates "${PODS_ROOT}/SDOSStencil/src/Templates/Realm/" --output "SDOSStencil/Generated/"
 ```
 
 ***
