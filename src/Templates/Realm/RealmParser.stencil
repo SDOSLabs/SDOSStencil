@@ -1,11 +1,13 @@
-{% for type in types.classes|annotated:"RealmParser" %}
-// sourcery:file:RealmProperties/RealmProperties
+{% for type in types.classes|annotated:"RealmFields" %}
+// sourcery:file:RealmFields/RealmFields
 {% set objectForCoding %}{{ type.name|lowerFirstWord }}{% endset %}
 // MARK: - {{ type.name }}Attributes
-enum {{ type.name }}Attributes: String {
-{% for variable in type.storedVariables %}
-	case {{ variable.name }} = "{{ variable.name }}"
-{% endfor %}
+extension {{ type.name }} {
+	enum Attributes {
+		{% for variable in type.storedVariables %}
+		static let {{ variable.name }} = "{{ variable.name }}"
+		{% endfor %}
+	}
 }
 // sourcery:end
 {% endfor %}

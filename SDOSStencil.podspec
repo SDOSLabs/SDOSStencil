@@ -1,7 +1,8 @@
+@version = "0.0.1"
 Pod::Spec.new do |spec|
 
   spec.name         = "SDOSStencil"
-  spec.version      = "0.0.1"
+  spec.version      = @version
   spec.summary      = "Librería para la generación de código automatico usando ficheros .stencil"
 
   spec.homepage     = "https://github.com/SDOSLabs/SDOSStencil"

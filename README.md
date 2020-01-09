@@ -2,8 +2,9 @@
   - [Introducción](#Introducci%C3%B3n)
   - [Instalación](#Instalaci%C3%B3n)
     - [Cocoapods](#Cocoapods)
+    - [Configuración](#Configuraci%C3%B3n)
   - [Cómo se usa](#C%C3%B3mo-se-usa)
-    - [RealmParser](#RealmParser)
+    - [RealmFields](#RealmFields)
   - [Dependencias](#Dependencias)
   - [Referencias](#Referencias)
 
@@ -17,38 +18,7 @@ Se ha usado esta forma de generación ya que a veces es necesario generar cierto
 
 ## Instalación
 
-Hay que lanzar un script cada vez que se builde el proyecto para así evitar tener futuros errores en ejecución, para ello vamos a realizar los siguientes pasos.
-
-1. En Xcode pulsamos en el proyecto, una vez en el detalle del proyecto pulsamos en el target que nos interese añadir el script.
-2. Una vez estemos en el target accedemos a la sección de `Build Phases`, le damos al + que tenemos en la esquina superior izquierda.
-3. Seleccionamos la opción de `New Run Script Phase`.
-4. (Opcional) Renombramos el script que nos ha creado por el nombre deseado. Ej: `SDOSStencil`
-5. Copiamos el siguiente script:
-
-```sh
-    "${SRCROOT}/Pods/Sourcery/bin/sourcery" --sources "SDOSStencil/RealmModels" --templates "${SRCROOT}/Pods/SDOSStencil/src/Templates/Realm/" --output "SDOSStencil/Generated/"
-```
-
-***
-
-**`IMPORTANTE`**
-
-La carpeta de `Generated` debe estar creada antes de ejecutar el `script`.
-
-***
-
-- En el parámetro de **`sources`** se coloca la ruta que queremos que el script analiza para generar recursos automáticos.
-- En el parámetro de **`templates`** se coloca la ruta de los `.stencil` que queremos usar (plantillas). En este caso estamos indicando las plantillas referentes a Realm.
-- En el parámetro de **`output`** va la ruta donde queremos que se generen los ficheros autogenerados.
-
-***
-
-6. Debemos mover el nuevo script que acabamos de crear en primer lugar, ya que se debe ejecutar lo primero cada vez que hagamos `Build`. (Debajo de `Dependencies` o `Target Dependencies`).
-7. Una vez realicemos lo anterior es necesario realizar un primer `Build` al proyecto. Si todo está correcto dentro de la carpeta que hayamos creado en el proyecto se generaran ficheros basándonos en los recursos que le hayamos proporcionado.
-8. Es necesario añadir manualmente los recursos generados dentro de la carpeta `Generated` al proyecto, ya que solo tendremos visibilidad de estos desde el `Finder`. Para hacerlo hacer lo siguiente:
-   1. Click derecho en la carpeta de `Generated`.
-   2. Add files to `"{nuesttro target}"`.
-   3. Click en la/las carpetas que nos ha generado y pulsar en **`Add`**.
+Para la instalacion lo vamos a realizar con Cocoapods, como se indica a continuación.
 
 ### Cocoapods
 
@@ -58,28 +28,80 @@ Usaremos [CocoaPods](https://cocoapods.org). Hay que añadir la dependencia al `
     pod `SDOSStencil`, `~> 0.0.1`
 ```
 
+### Configuración
+
+Hay que lanzar un script cada vez que se builde el proyecto para así evitar tener futuros errores en ejecución, para ello vamos a realizar los siguientes pasos.
+
+1. En Xcode: Pulsar sobre *File*, *New*, *Target*, elegir la opción *Cross-platform*, seleccionar *Aggregate* e indicar el nombre *`SDOSStencil`*
+2. Seleccionar el proyecto, elegir el `TARGET` que acabamos de crear, seleccionar la pestaña de `Build Phases` y pulsar en añadir `New Run Script Phase` en el icono de **`+`** arriba a la izquierda
+3. (Opcional) Renombramos el script que nos ha creado por el nombre deseado. Ej: `SDOSStencil`
+4. Copiamos el siguiente script:
+
+```sh
+    "${PODS_ROOT}/Sourcery/bin/sourcery" --sources "SDOSStencil/RealmModels" --templates "${PODS_ROOT}/SDOSStencil/src/Templates/Realm/" --output "SDOSStencil/Generated/"
+```
+
+***
+
+**`IMPORTANTE`**
+
+La carpeta de `Generated` debe estar creada antes de ejecutar el `script`.
+
+***
+| Parametro   |      Descripción      |  Ejemplo |
+|----------|:-------------:|------:|
+|**`sources`**|Se coloca la ruta que queremos que el script analiza para generar recursos automáticos. |`"SDOSStencil/RealmModels"`|
+|**`templates`**|Se coloca la ruta de los `.stencil` que queremos usar (plantillas). En este caso estamos indicando las plantillas referentes a Realm.|`"${PODS_ROOT}/SDOSStencil/src/Templates/Realm/"`|
+| **`output`** |Va la ruta donde queremos que se generen los ficheros autogenerados. |`"SDOSStencil/Generated/"`|
+
+***
+
+1. Debemos mover el nuevo script que acabamos de crear en primer lugar, ya que se debe ejecutar lo primero cada vez que hagamos `Build`. (Debajo de `Dependencies` o `Target Dependencies`).
+2. Una vez realicemos lo anterior es necesario realizar un primer `Build` al proyecto. Si todo está correcto dentro de la carpeta que hayamos creado en el proyecto se generaran ficheros basándonos en los recursos que le hayamos proporcionado.
+3. Es necesario añadir manualmente los recursos generados dentro de la carpeta `Generated` al proyecto, ya que solo tendremos visibilidad de estos desde el `Finder`. Para hacerlo hacer lo siguiente:
+   1. Click derecho en la carpeta de `Generated`.
+   2. Add files to `"{nuestro target}"`.
+   3. Click en la/las carpetas que nos ha generado y pulsar en **`Add`**.
+
+
 ## Cómo se usa
 
 Todos los `stencil` están preparados para parsear con ciertos parámetros, todos los ficheros a parsear deben incluir la anotación con el identificador del autogenerado que se va a usar. Esto se va a ver a continuación en el desglose de cada `stencil`.
 
-### RealmParser
+### RealmFields
 
-`RealmParser` es un stencil orientado para la generación de enumeradores con las propiedades que tiene un modelo Realm, esto se realiza para evitar realizar consultas, definición de `PrimaryKey` propiedades que se deben ignorar, de forma expresa, para ello vamos a usar el enumeador correspondiente a cada modelo de `Realm` que tengamos. A continuación las necesidades que tiene esta plantilla.
+`RealmFields` es un stencil orientado para la generación de enumeradores con las propiedades que tiene un modelo Realm, esto se realiza para evitar realizar consultas, definición de `PrimaryKey` propiedades que se deben ignorar, de forma expresa, para ello vamos a usar el enumeador correspondiente a cada modelo de `Realm` que tengamos. A continuación las necesidades que tiene esta plantilla.
 
-- Nuestros modelos `Realm` deben incluir un comentario (_`//sourcery:RealmParser
-`_) justo encima de su definición indicando que esta clase se va a usar para la autogeneración.
+- Para que el generador de constantes de la clase funcione es importante tener en cuenta varios puntos, ya que sin ellos no va a generar nada de dicha clase ya que en el stencil esta definida la siguiente regla:
+```
+    {% for type in types.classes|annotated:"RealmFields" %}
+```
+
+  - Lo primero, es importante que nuestra entidad de `Realm` sea de tipo **`class`** ya que es una de las claves para que el generador funcione.
+  - Otro de los puntos importantes es que la clase debe estar anotado con un comentario justo encima para que se detecte, este debe contener `RealmFields`. En el caso de tener varios se concatenan separados por comas.
+    - Ej simple: sourcery:`RealmFields`
+    - Ej multiple: sourcery:`RealmFields`,`RealmProperties`,`etc`
+  - 
 
 ```swift
-//sourcery:RealmParser
-class DogRealm: Object {
+//sourcery:RealmFields
+class PersonRealm: Object {
 
     var name = ""
-    var identifier = 0
+    var identifier = UUID().uuidString
+    
+    @objc dynamic var avatar: Data? = nil
+    
+    let dogs = List<DogRealm>()
+    
+    override class func primaryKey() -> String? {
+        return PersonRealm.Attributes.identifier
+    }
 
 }
 ```
 
-- Este `stencil` nos va a generar una carpeta dentro de nuestra carpeta `Generated` con el nombre de `RealmProperties` y dentro un fichero con el nombre de `RealmProperties.generated.swift`.
+- Este `stencil` nos va a generar una carpeta dentro de nuestra carpeta `Generated` con el nombre de `RealmFields` y dentro un fichero con el nombre de `RealmFields.generated.swift`.
 
 Tiene esta estructura:
 
@@ -88,10 +110,23 @@ Tiene esta estructura:
 // DO NOT EDIT
 
 // MARK: - DogRealmAttributes
-enum DogRealmAttributes: String {
-    case name = "name"
-    case identifier = "identifier"
+extension DogRealm {
+	enum Attributes {
+		static let name = "name"
+		static let identifier = "identifier"
+	}
 }
+
+// MARK: - PersonRealmAttributes
+extension PersonRealm {
+	enum Attributes {
+		static let name = "name"
+		static let identifier = "identifier"
+		static let avatar = "avatar"
+		static let dogs = "dogs"
+	}
+}
+
 ```
 
 Si el modelo no contiene el comentario o no es de tipo **`class`** el generador no lo va a detectar y no va a generar el fichero con sus identificadores.
@@ -101,3 +136,5 @@ Si el modelo no contiene el comentario o no es de tipo **`class`** el generador 
 
 ## Referencias
 * https://github.com/SDOSLabs/SDOSStencil
+* https://github.com/krzysztofzablocki/Sourcery
+* [Guia .stencil](https://cdn.rawgit.com/krzysztofzablocki/Sourcery/master/docs/index.html)

@@ -9,10 +9,14 @@
 import Foundation
 import RealmSwift
 
-//sourcery:RealmParser
+//sourcery:RealmFields
 class DogRealm: Object {
  
     var name = ""
     var identifier = 0
+    
+    override class func primaryKey() -> String? {
+        return DogRealm.Attributes.identifier
+    }
     
 }
