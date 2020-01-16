@@ -1,13 +1,13 @@
-- [SDOSStencil](#SDOSStencil)
-  - [Introducción](#Introducci%C3%B3n)
-  - [Instalación](#Instalaci%C3%B3n)
-    - [Cocoapods](#Cocoapods)
-    - [Configuración](#Configuraci%C3%B3n)
-      - [Parametros del script](#Parametros-del-script)
-  - [Cómo se usa](#C%C3%B3mo-se-usa)
-    - [RealmFields](#RealmFields)
-  - [Dependencias](#Dependencias)
-  - [Referencias](#Referencias)
+- [SDOSStencil](#sdosstencil)
+  - [Introducción](#introducci%c3%b3n)
+  - [Instalación](#instalaci%c3%b3n)
+    - [Cocoapods](#cocoapods)
+    - [Configuración](#configuraci%c3%b3n)
+      - [Parametros del script](#parametros-del-script)
+  - [Cómo se usa](#c%c3%b3mo-se-usa)
+    - [RealmFields](#realmfields)
+  - [Dependencias](#dependencias)
+  - [Referencias](#referencias)
 
 # SDOSStencil
 
@@ -19,22 +19,20 @@ Se ha usado esta forma de generación ya que a veces es necesario generar cierto
 
 ## Instalación
 
-Para la instalacion lo vamos a realizar con Cocoapods, como se indica a continuación.
-
 ### Cocoapods
 
-Usaremos [CocoaPods](https://cocoapods.org). Hay que añadir la dependencia al `Podfile` y el source de esta:
+Usaremos [CocoaPods](https://cocoapods.org). Hay que añadir la dependencia y el source al `Podfile`:
 
 **Source**:
 
 ```ruby
-source ‘https://github.com/SDOSLabs/cocoapods-specs.git’
+source 'https://github.com/SDOSLabs/cocoapods-specs.git'
 ```
 
 **Dependencia**:
 
 ```ruby
-    pod `SDOSStencil`, `~> 0.0.1`
+pod 'SDOSStencil', '~> 1.0.0'
 ```
 
 ### Configuración
@@ -59,10 +57,10 @@ Un ejemplo de como quedaria este script en un proyecto es el siguiente:
     "${SRCROOT}/Pods/Sourcery/bin/sourcery" --sources "${SRCROOT}/SDOSStencil/RealmModels" --templates "${SRCROOT}/Pods/SDOSStencil/src/Templates/Realm/RealmParser.stencil" --output "${SRCROOT}/SDOSStencil/Generated/"
 ```
 
-5. Realizamos un primer `Build` al target que hemos creado. Si todo está correcto dentro de la carpeta que hayamos creado en el proyecto se generaran ficheros basándonos en los recursos que le hayamos proporcionado.
-6. Es necesario añadir manualmente los recursos generados dentro de la carpeta que hemos definido como `<Output folder>` al proyecto, ya que solo tendremos visibilidad de estos desde el `Finder`. Para hacerlo hacer lo siguiente:
-   1. Click derecho nuestro `<Output folder>`.
-   2. Add files to `"{nuestro target}"`.
+1. Realizamos un primer `Build` al target que hemos creado. Si todo es correcto, en de la ruta indicada en el parámetro `--output` se generará una carpeta con los ficheros generados. Los ficheros dependen del las plantillas indicadas.
+2. Es necesario añadir manualmente estas carpetas y ficheros generados al proyecto, ya que solo tendremos visibilidad de estos desde el `Finder`. Para hacerlo hacer lo siguiente:
+   1. Navegar a la carpeta de Xcode donde queramos añadir los nuevos ficheros y pulsar click derecho.
+   2. Seleccionar la opción "Add files to `<target>`".
    3. Click en la/las carpetas que nos ha generado y pulsar en **`Add`**.
 
 #### Parametros del script
@@ -78,24 +76,23 @@ Un ejemplo de como quedaria este script en un proyecto es el siguiente:
 
 ## Cómo se usa
 
-Todos los `stencil` están preparados para parsear con ciertos parámetros, todos los ficheros a parsear deben incluir la anotación con el identificador del autogenerado que se va a usar. Esto se va a ver a continuación en el desglose de cada `stencil`.
+Cada `stencil` desarrolla sus propias plantillas en base a las que debe generar el código. En este caso todos los ficheros a parsear deben incluir una anotación con el identificador del autogenerado que se va a usar. Esto se va a ver a continuación en el desglose de cada `stencil`.
 
 ### RealmFields
 
-`RealmFields` es un stencil orientado para la generación de enumeradores con las propiedades que tiene un modelo Realm, esto se realiza para evitar realizar consultas, definición de `PrimaryKey` propiedades que se deben ignorar, de forma expresa, para ello vamos a usar el enumeador correspondiente a cada modelo de `Realm` que tengamos. A continuación las necesidades que tiene esta plantilla.
+`RealmFields` es un stencil orientado para la generación de enumeradores con constantes de las propiedades que tiene un modelo Realm. Esto es útil a la hora de realizar consultas, definir la `PrimaryKey`, ignorar propiedades, etc, porque evitaremos posibles al usar constantes autogeneradas
 
-- Para que el generador de constantes de la clase funcione es importante tener en cuenta varios puntos, ya que sin ellos no va a generar nada de dicha clase ya que en el stencil esta definida la siguiente regla:
-```
+
+La plantilla requiere que las clases de Realm cumplan las siguientes reglas (en formato stencil):
+```js
     {% for type in types.classes|annotated:"RealmFields" %}
 ```
+Esto se traduce a lo siguiente:
+  - La entidad debe ser de tipo **`class`** 
+  - Debe contener la anotación **`//sourcery:RealmFields`**. La anotación es un comentario justo encima de la declaración de la clase
 
-  - Lo primero, es importante que nuestra entidad de `Realm` sea de tipo **`class`** ya que es una de las claves para que el generador funcione.
-  - Otro de los puntos importantes es que la clase debe estar anotado con un comentario justo encima para que se detecte, este debe contener `RealmFields`. En el caso de tener varios se concatenan separados por comas.
-    - Ej simple: sourcery:`RealmFields`
-    - Ej multiple: sourcery:`RealmFields`,`RealmProperties`,`etc`
-  - 
-
-```swift
+El siguiente ejemplo cumple las condiciones anteriores:
+```js
 //sourcery:RealmFields
 class PersonRealm: Object {
 
@@ -113,14 +110,11 @@ class PersonRealm: Object {
 }
 ```
 
-- Este `stencil` nos va a generar una carpeta dentro de nuestra carpeta `Generated` con el nombre de `RealmFields` y dentro un fichero con el nombre de `RealmFields.generated.swift`.
+Este `stencil` nos va a generar una carpeta dentro de la ruta indicada en el parámetro `--output` del comando, con el nombre de `RealmFields` y dentro un fichero con el nombre de `RealmFields.generated.swift`.
 
 Tiene esta estructura:
 
-```swift
-// Generated using Sourcery 0.17.0 — https://github.com/krzysztofzablocki/Sourcery
-// DO NOT EDIT
-
+```js
 // MARK: - DogRealmAttributes
 extension DogRealm {
 	enum Attributes {
@@ -140,8 +134,6 @@ extension PersonRealm {
 }
 
 ```
-
-Si el modelo no contiene el comentario o no es de tipo **`class`** el generador no lo va a detectar y no va a generar el fichero con sus identificadores.
 
 ## Dependencias
 * [Sourcery](https://github.com/krzysztofzablocki/Sourcery) - &gt;= 0.17.0
