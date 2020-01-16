@@ -22,7 +22,15 @@ Para la instalacion lo vamos a realizar con Cocoapods, como se indica a continua
 
 ### Cocoapods
 
-Usaremos [CocoaPods](https://cocoapods.org). Hay que añadir la dependencia al `Podfile`:
+Usaremos [CocoaPods](https://cocoapods.org). Hay que añadir la dependencia al `Podfile` y el source de esta:
+
+**Source**:
+
+```ruby
+source ‘https://github.com/SDOSLabs/cocoapods-specs.git’
+```
+
+**Dependencia**:
 
 ```ruby
     pod `SDOSStencil`, `~> 0.0.1`
@@ -30,15 +38,15 @@ Usaremos [CocoaPods](https://cocoapods.org). Hay que añadir la dependencia al `
 
 ### Configuración
 
-Hay que lanzar un script cada vez que se builde el proyecto para así evitar tener futuros errores en ejecución, para ello vamos a realizar los siguientes pasos.
+Vamos a crear un nuevo **target** en el proyecto para buildearlo cada vez que realicemos una modificación o creación de algún modelo de **Realm**, para ello debemos de seguir los siguientes pasos:
 
-1. En Xcode: Pulsar sobre *File*, *New*, *Target*, elegir la opción *Cross-platform*, seleccionar *Aggregate* e indicar el nombre *`SDOSStencil`*
+1. En Xcode: Pulsar sobre *File*, *New*, *Target*, elegir la opción *Cross-platform*, seleccionar *Aggregate* e indicar el nombre *`RealmFields`*
 2. Seleccionar el proyecto, elegir el `TARGET` que acabamos de crear, seleccionar la pestaña de `Build Phases` y pulsar en añadir `New Run Script Phase` en el icono de **`+`** arriba a la izquierda
-3. (Opcional) Renombramos el script que nos ha creado por el nombre deseado. Ej: `SDOSStencil`
+3. (Opcional) Renombramos el script que nos ha creado por el nombre deseado. Ej: `RealmFields`
 4. Copiamos el siguiente script:
 
 ```sh
-    "${SRCROOT}/Pods/Sourcery/bin/sourcery" --sources "SDOSStencil/RealmModels" --templates "${PODS_ROOT}/SDOSStencil/src/Templates/Realm/" --output "SDOSStencil/Generated/"
+    "${SRCROOT}/Pods/Sourcery/bin/sourcery" --sources "${SRCROOT}/SDOSStencil/RealmModels" --templates "${SRCROOT}/Pods/SDOSStencil/src/Templates/Realm/RealmParser.stencil" --output "${SRCROOT}/SDOSStencil/Generated/"
 ```
 
 ***
@@ -50,15 +58,14 @@ La carpeta de `Generated` debe estar creada antes de ejecutar el `script`.
 ***
 | Parametro   |      Descripción      |  Ejemplo |
 |----------|:-------------:|------:|
-|**`sources`**|Se coloca la ruta que queremos que el script analiza para generar recursos automáticos. |`"SDOSStencil/RealmModels"`|
-|**`templates`**|Se coloca la ruta de los `.stencil` que queremos usar (plantillas). En este caso estamos indicando las plantillas referentes a Realm.|`"${PODS_ROOT}/SDOSStencil/src/Templates/Realm/"`|
-| **`output`** |Va la ruta donde queremos que se generen los ficheros autogenerados. |`"SDOSStencil/Generated/"`|
+|**`sources`**|Ruta que queremos que el script analiza para generar recursos automáticos. |`"SDOSStencil/RealmModels"`|
+|**`templates`**|Ruta de los `.stencil` que queremos usar (plantillas) o directamente a la plantilla. En este caso estamos indicando las plantillas referentes a Realm.|`"${SRCROOT}/Pods/SDOSStencil/src/Templates/Realm/"` o `"${SRCROOT}/Pods/SDOSStencil/src/Templates/Realm/RealmParser.stencil"`|
+| **`output`** |Ruta donde queremos que se generen los ficheros autogenerados. |`"${SRCROOT}/SDOSStencil/Generated/"`|
 
 ***
 
-1. Debemos mover el nuevo script que acabamos de crear en primer lugar, ya que se debe ejecutar lo primero cada vez que hagamos `Build`. (Debajo de `Dependencies` o `Target Dependencies`).
-2. Una vez realicemos lo anterior es necesario realizar un primer `Build` al proyecto. Si todo está correcto dentro de la carpeta que hayamos creado en el proyecto se generaran ficheros basándonos en los recursos que le hayamos proporcionado.
-3. Es necesario añadir manualmente los recursos generados dentro de la carpeta `Generated` al proyecto, ya que solo tendremos visibilidad de estos desde el `Finder`. Para hacerlo hacer lo siguiente:
+5. Una vez realicemos lo anterior es necesario realizar un primer `Build` al target que hemos creado. Si todo está correcto dentro de la carpeta que hayamos creado en el proyecto se generaran ficheros basándonos en los recursos que le hayamos proporcionado.
+6. Es necesario añadir manualmente los recursos generados dentro de la carpeta `Generated` al proyecto, ya que solo tendremos visibilidad de estos desde el `Finder`. Para hacerlo hacer lo siguiente:
    1. Click derecho en la carpeta de `Generated`.
    2. Add files to `"{nuestro target}"`.
    3. Click en la/las carpetas que nos ha generado y pulsar en **`Add`**.

@@ -21,7 +21,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		BEF486650A42C4DA91E278A0 /* Pods_SDOSStencil.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08C41C1CDDF1777B0EBA3D6D /* Pods_SDOSStencil.framework */; };
+		6EF3FA3B4BB4D3127FEE8ABA /* Pods_SDOSStencilExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B59FA88CFBCCAD4787A87ECE /* Pods_SDOSStencilExample.framework */; };
 		CE7503D823C714C800F940B3 /* RealmFields.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7503D723C714C800F940B3 /* RealmFields.generated.swift */; };
 		CE7503DF23C7321700F940B3 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7503DE23C7321700F940B3 /* Person.swift */; };
 		CEF38A0023C5C20B00ADF8A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF389FF23C5C20B00ADF8A5 /* AppDelegate.swift */; };
@@ -34,13 +34,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		08C41C1CDDF1777B0EBA3D6D /* Pods_SDOSStencil.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SDOSStencil.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E8BDFD85A8927FA4062147F /* Pods-SDOSStencilExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDOSStencilExample.release.xcconfig"; path = "Target Support Files/Pods-SDOSStencilExample/Pods-SDOSStencilExample.release.xcconfig"; sourceTree = "<group>"; };
 		65598DF79CD1EA6809F1B406 /* Pods-SDOSStencil.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDOSStencil.release.xcconfig"; path = "Target Support Files/Pods-SDOSStencil/Pods-SDOSStencil.release.xcconfig"; sourceTree = "<group>"; };
+		710322B8DF060618BC79A668 /* Pods-SDOSStencilExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDOSStencilExample.debug.xcconfig"; path = "Target Support Files/Pods-SDOSStencilExample/Pods-SDOSStencilExample.debug.xcconfig"; sourceTree = "<group>"; };
+		B59FA88CFBCCAD4787A87ECE /* Pods_SDOSStencilExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SDOSStencilExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE7503D423C7135900F940B3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
 		CE7503D523C7139F00F940B3 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = CHANGELOG.md; path = ../../CHANGELOG.md; sourceTree = "<group>"; };
 		CE7503D723C714C800F940B3 /* RealmFields.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmFields.generated.swift; sourceTree = "<group>"; };
 		CE7503DE23C7321700F940B3 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
-		CEF389FC23C5C20B00ADF8A5 /* SDOSStencil.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDOSStencil.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEF389FC23C5C20B00ADF8A5 /* SDOSStencilExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDOSStencilExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEF389FF23C5C20B00ADF8A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEF38A0123C5C20B00ADF8A5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CEF38A0323C5C20B00ADF8A5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,7 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BEF486650A42C4DA91E278A0 /* Pods_SDOSStencil.framework in Frameworks */,
+				6EF3FA3B4BB4D3127FEE8ABA /* Pods_SDOSStencilExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +71,8 @@
 			children = (
 				D1E67B75773A700EF653DCAB /* Pods-SDOSStencil.debug.xcconfig */,
 				65598DF79CD1EA6809F1B406 /* Pods-SDOSStencil.release.xcconfig */,
+				710322B8DF060618BC79A668 /* Pods-SDOSStencilExample.debug.xcconfig */,
+				3E8BDFD85A8927FA4062147F /* Pods-SDOSStencilExample.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -96,7 +100,7 @@
 		CEF389FD23C5C20B00ADF8A5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CEF389FC23C5C20B00ADF8A5 /* SDOSStencil.app */,
+				CEF389FC23C5C20B00ADF8A5 /* SDOSStencilExample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -137,7 +141,7 @@
 		EBAA497181CFB0062A94819C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				08C41C1CDDF1777B0EBA3D6D /* Pods_SDOSStencil.framework */,
+				B59FA88CFBCCAD4787A87ECE /* Pods_SDOSStencilExample.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -145,9 +149,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CEF389FB23C5C20B00ADF8A5 /* SDOSStencil */ = {
+		CEF389FB23C5C20B00ADF8A5 /* SDOSStencilExample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CEF38A1023C5C20C00ADF8A5 /* Build configuration list for PBXNativeTarget "SDOSStencil" */;
+			buildConfigurationList = CEF38A1023C5C20C00ADF8A5 /* Build configuration list for PBXNativeTarget "SDOSStencilExample" */;
 			buildPhases = (
 				0101DA3A5DA75A519832299F /* [CP] Check Pods Manifest.lock */,
 				CEF389F823C5C20B00ADF8A5 /* Sources */,
@@ -159,9 +163,9 @@
 			);
 			dependencies = (
 			);
-			name = SDOSStencil;
+			name = SDOSStencilExample;
 			productName = SDOSStencil;
-			productReference = CEF389FC23C5C20B00ADF8A5 /* SDOSStencil.app */;
+			productReference = CEF389FC23C5C20B00ADF8A5 /* SDOSStencilExample.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -182,7 +186,7 @@
 					};
 				};
 			};
-			buildConfigurationList = CEF389F723C5C20B00ADF8A5 /* Build configuration list for PBXProject "SDOSStencil" */;
+			buildConfigurationList = CEF389F723C5C20B00ADF8A5 /* Build configuration list for PBXProject "SDOSStencilExample" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -195,7 +199,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CEF389FB23C5C20B00ADF8A5 /* SDOSStencil */,
+				CEF389FB23C5C20B00ADF8A5 /* SDOSStencilExample */,
 				CE7503D923C7200C00F940B3 /* RealmFields */,
 			);
 		};
@@ -230,7 +234,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SDOSStencil-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-SDOSStencilExample-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -243,15 +247,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SDOSStencil/Pods-SDOSStencil-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-SDOSStencilExample/Pods-SDOSStencilExample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SDOSStencil/Pods-SDOSStencil-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-SDOSStencilExample/Pods-SDOSStencilExample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SDOSStencil/Pods-SDOSStencil-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SDOSStencilExample/Pods-SDOSStencilExample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CE7503DD23C7201A00F940B3 /* RealmFields */ = {
@@ -270,7 +274,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Sourcery/bin/sourcery\" --sources \"SDOSStencil/RealmModels\" --templates \"../../src/Templates/Realm/\" --output \"SDOSStencil/Generated/\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Sourcery/bin/sourcery\" --sources \"SDOSStencil/RealmModels\" --templates \"../../src/Templates/Realm/RealmParser.stencil\" --output \"SDOSStencil/Generated/\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -444,7 +448,7 @@
 		};
 		CEF38A1123C5C20C00ADF8A5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D1E67B75773A700EF653DCAB /* Pods-SDOSStencil.debug.xcconfig */;
+			baseConfigurationReference = 710322B8DF060618BC79A668 /* Pods-SDOSStencilExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -463,7 +467,7 @@
 		};
 		CEF38A1223C5C20C00ADF8A5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 65598DF79CD1EA6809F1B406 /* Pods-SDOSStencil.release.xcconfig */;
+			baseConfigurationReference = 3E8BDFD85A8927FA4062147F /* Pods-SDOSStencilExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -492,7 +496,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CEF389F723C5C20B00ADF8A5 /* Build configuration list for PBXProject "SDOSStencil" */ = {
+		CEF389F723C5C20B00ADF8A5 /* Build configuration list for PBXProject "SDOSStencilExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CEF38A0E23C5C20C00ADF8A5 /* Debug */,
@@ -501,7 +505,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CEF38A1023C5C20C00ADF8A5 /* Build configuration list for PBXNativeTarget "SDOSStencil" */ = {
+		CEF38A1023C5C20C00ADF8A5 /* Build configuration list for PBXNativeTarget "SDOSStencilExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CEF38A1123C5C20C00ADF8A5 /* Debug */,

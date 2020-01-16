@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "CEF389FB23C5C20B00ADF8A5"
-               BuildableName = "SDOSStencil.app"
-               BlueprintName = "SDOSStencil"
-               ReferencedContainer = "container:SDOSStencil.xcodeproj">
+               BuildableName = "SDOSStencilExample.app"
+               BlueprintName = "SDOSStencilExample"
+               ReferencedContainer = "container:SDOSStencilExample.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,9 +45,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CEF389FB23C5C20B00ADF8A5"
-            BuildableName = "SDOSStencil.app"
-            BlueprintName = "SDOSStencil"
-            ReferencedContainer = "container:SDOSStencil.xcodeproj">
+            BuildableName = "SDOSStencilExample.app"
+            BlueprintName = "SDOSStencilExample"
+            ReferencedContainer = "container:SDOSStencilExample.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CEF389FB23C5C20B00ADF8A5"
-            BuildableName = "SDOSStencil.app"
-            BlueprintName = "SDOSStencil"
-            ReferencedContainer = "container:SDOSStencil.xcodeproj">
+            BuildableName = "SDOSStencilExample.app"
+            BlueprintName = "SDOSStencilExample"
+            ReferencedContainer = "container:SDOSStencilExample.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
