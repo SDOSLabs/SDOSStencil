@@ -1,0 +1,541 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		CE7503D923C7200C00F940B3 /* RealmFields */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = CE7503DA23C7200C00F940B3 /* Build configuration list for PBXAggregateTarget "RealmFields" */;
+			buildPhases = (
+				CE7503DD23C7201A00F940B3 /* RealmFields */,
+			);
+			dependencies = (
+			);
+			name = RealmFields;
+			productName = RealmFields;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		6EF3FA3B4BB4D3127FEE8ABA /* Pods_SDOSStencilExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B59FA88CFBCCAD4787A87ECE /* Pods_SDOSStencilExample.framework */; };
+		CE7503D823C714C800F940B3 /* RealmFields.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7503D723C714C800F940B3 /* RealmFields.generated.swift */; };
+		CE7503DF23C7321700F940B3 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7503DE23C7321700F940B3 /* Person.swift */; };
+		CEF38A0023C5C20B00ADF8A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF389FF23C5C20B00ADF8A5 /* AppDelegate.swift */; };
+		CEF38A0223C5C20B00ADF8A5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF38A0123C5C20B00ADF8A5 /* SceneDelegate.swift */; };
+		CEF38A0423C5C20B00ADF8A5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF38A0323C5C20B00ADF8A5 /* ViewController.swift */; };
+		CEF38A0723C5C20B00ADF8A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEF38A0523C5C20B00ADF8A5 /* Main.storyboard */; };
+		CEF38A0923C5C20C00ADF8A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEF38A0823C5C20C00ADF8A5 /* Assets.xcassets */; };
+		CEF38A0C23C5C20C00ADF8A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEF38A0A23C5C20C00ADF8A5 /* LaunchScreen.storyboard */; };
+		CEF38A1623C5C29F00ADF8A5 /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF38A1523C5C29F00ADF8A5 /* Dog.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3E8BDFD85A8927FA4062147F /* Pods-SDOSStencilExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDOSStencilExample.release.xcconfig"; path = "Target Support Files/Pods-SDOSStencilExample/Pods-SDOSStencilExample.release.xcconfig"; sourceTree = "<group>"; };
+		65598DF79CD1EA6809F1B406 /* Pods-SDOSStencil.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDOSStencil.release.xcconfig"; path = "Target Support Files/Pods-SDOSStencil/Pods-SDOSStencil.release.xcconfig"; sourceTree = "<group>"; };
+		710322B8DF060618BC79A668 /* Pods-SDOSStencilExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDOSStencilExample.debug.xcconfig"; path = "Target Support Files/Pods-SDOSStencilExample/Pods-SDOSStencilExample.debug.xcconfig"; sourceTree = "<group>"; };
+		B59FA88CFBCCAD4787A87ECE /* Pods_SDOSStencilExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SDOSStencilExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE7503D423C7135900F940B3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
+		CE7503D523C7139F00F940B3 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = CHANGELOG.md; path = ../../CHANGELOG.md; sourceTree = "<group>"; };
+		CE7503D723C714C800F940B3 /* RealmFields.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmFields.generated.swift; sourceTree = "<group>"; };
+		CE7503DE23C7321700F940B3 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		CEF389FC23C5C20B00ADF8A5 /* SDOSStencilExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDOSStencilExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEF389FF23C5C20B00ADF8A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CEF38A0123C5C20B00ADF8A5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CEF38A0323C5C20B00ADF8A5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CEF38A0623C5C20B00ADF8A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CEF38A0823C5C20C00ADF8A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CEF38A0B23C5C20C00ADF8A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CEF38A0D23C5C20C00ADF8A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEF38A1523C5C29F00ADF8A5 /* Dog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dog.swift; sourceTree = "<group>"; };
+		D1E67B75773A700EF653DCAB /* Pods-SDOSStencil.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDOSStencil.debug.xcconfig"; path = "Target Support Files/Pods-SDOSStencil/Pods-SDOSStencil.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CEF389F923C5C20B00ADF8A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6EF3FA3B4BB4D3127FEE8ABA /* Pods_SDOSStencilExample.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		750A6CCBDA48E073C9AB64B8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D1E67B75773A700EF653DCAB /* Pods-SDOSStencil.debug.xcconfig */,
+				65598DF79CD1EA6809F1B406 /* Pods-SDOSStencil.release.xcconfig */,
+				710322B8DF060618BC79A668 /* Pods-SDOSStencilExample.debug.xcconfig */,
+				3E8BDFD85A8927FA4062147F /* Pods-SDOSStencilExample.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CE7503D623C714C800F940B3 /* RealmFields */ = {
+			isa = PBXGroup;
+			children = (
+				CE7503D723C714C800F940B3 /* RealmFields.generated.swift */,
+			);
+			path = RealmFields;
+			sourceTree = "<group>";
+		};
+		CEF389F323C5C20B00ADF8A5 = {
+			isa = PBXGroup;
+			children = (
+				CE7503D523C7139F00F940B3 /* CHANGELOG.md */,
+				CE7503D423C7135900F940B3 /* README.md */,
+				CEF389FE23C5C20B00ADF8A5 /* SDOSStencil */,
+				CEF389FD23C5C20B00ADF8A5 /* Products */,
+				750A6CCBDA48E073C9AB64B8 /* Pods */,
+				EBAA497181CFB0062A94819C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CEF389FD23C5C20B00ADF8A5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CEF389FC23C5C20B00ADF8A5 /* SDOSStencilExample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CEF389FE23C5C20B00ADF8A5 /* SDOSStencil */ = {
+			isa = PBXGroup;
+			children = (
+				CEF38A1423C5C28800ADF8A5 /* Generated */,
+				CEF38A1323C5C28100ADF8A5 /* RealmModels */,
+				CEF389FF23C5C20B00ADF8A5 /* AppDelegate.swift */,
+				CEF38A0123C5C20B00ADF8A5 /* SceneDelegate.swift */,
+				CEF38A0323C5C20B00ADF8A5 /* ViewController.swift */,
+				CEF38A0523C5C20B00ADF8A5 /* Main.storyboard */,
+				CEF38A0823C5C20C00ADF8A5 /* Assets.xcassets */,
+				CEF38A0A23C5C20C00ADF8A5 /* LaunchScreen.storyboard */,
+				CEF38A0D23C5C20C00ADF8A5 /* Info.plist */,
+			);
+			path = SDOSStencil;
+			sourceTree = "<group>";
+		};
+		CEF38A1323C5C28100ADF8A5 /* RealmModels */ = {
+			isa = PBXGroup;
+			children = (
+				CEF38A1523C5C29F00ADF8A5 /* Dog.swift */,
+				CE7503DE23C7321700F940B3 /* Person.swift */,
+			);
+			path = RealmModels;
+			sourceTree = "<group>";
+		};
+		CEF38A1423C5C28800ADF8A5 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				CE7503D623C714C800F940B3 /* RealmFields */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
+		EBAA497181CFB0062A94819C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B59FA88CFBCCAD4787A87ECE /* Pods_SDOSStencilExample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CEF389FB23C5C20B00ADF8A5 /* SDOSStencilExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEF38A1023C5C20C00ADF8A5 /* Build configuration list for PBXNativeTarget "SDOSStencilExample" */;
+			buildPhases = (
+				0101DA3A5DA75A519832299F /* [CP] Check Pods Manifest.lock */,
+				29C0469F23D09880005A98A0 /* Xcode Version */,
+				CEF389F823C5C20B00ADF8A5 /* Sources */,
+				CEF389F923C5C20B00ADF8A5 /* Frameworks */,
+				CEF389FA23C5C20B00ADF8A5 /* Resources */,
+				36FDA567AA31A195549115D9 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SDOSStencilExample;
+			productName = SDOSStencil;
+			productReference = CEF389FC23C5C20B00ADF8A5 /* SDOSStencilExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CEF389F423C5C20B00ADF8A5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1110;
+				LastUpgradeCheck = 1110;
+				ORGANIZATIONNAME = SDOS;
+				TargetAttributes = {
+					CE7503D923C7200C00F940B3 = {
+						CreatedOnToolsVersion = 11.1;
+					};
+					CEF389FB23C5C20B00ADF8A5 = {
+						CreatedOnToolsVersion = 11.1;
+					};
+				};
+			};
+			buildConfigurationList = CEF389F723C5C20B00ADF8A5 /* Build configuration list for PBXProject "SDOSStencilExample" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CEF389F323C5C20B00ADF8A5;
+			productRefGroup = CEF389FD23C5C20B00ADF8A5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CEF389FB23C5C20B00ADF8A5 /* SDOSStencilExample */,
+				CE7503D923C7200C00F940B3 /* RealmFields */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CEF389FA23C5C20B00ADF8A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEF38A0C23C5C20C00ADF8A5 /* LaunchScreen.storyboard in Resources */,
+				CEF38A0923C5C20C00ADF8A5 /* Assets.xcassets in Resources */,
+				CEF38A0723C5C20B00ADF8A5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0101DA3A5DA75A519832299F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SDOSStencilExample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		29C0469F23D09880005A98A0 /* Xcode Version */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Xcode Version";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "file=\"$SRCROOT/xcode-version.lock\"\n\n# create file if it does not exist\ntouch \"${file}\"\n\n# if file does not exist or it is not readable -> error\nif [ ! -r \"${file}\" ]\nthen\necho \"error: Could not create file: ${file} (see the Xcode Version script in Build Phases)\"\nerror -1\nfi\n# read the keys and values in the file\nwhile IFS='=' read -r key value\ndo\neval \"${key}='${value}'\"\ndone < \"${file}\"\n\n# if not defined the keys: XCODE_VERSION_MAJOR_REQUIRED, XCODE_VERSION_MINOR_REQUIRED, XCODE_VERSION_ACTUAL_REQUIRED\nif ([ -z ${XCODE_VERSION_MAJOR_REQUIRED:+\"1\"} ] || [ -z ${XCODE_VERSION_MINOR_REQUIRED:+\"1\"} ] || [ -z ${XCODE_VERSION_ACTUAL_REQUIRED:+\"1\"} ])\nthen\necho \"XCODE_VERSION_MAJOR_REQUIRED=${XCODE_VERSION_MAJOR}\" > \"${file}\"\necho \"XCODE_VERSION_MINOR_REQUIRED=${XCODE_VERSION_MINOR}\" >> \"${file}\"\necho \"XCODE_VERSION_ACTUAL_REQUIRED=${XCODE_VERSION_ACTUAL}\" >> \"${file}\"\n\necho \"warning: Required Xcode version set to ${XCODE_VERSION_ACTUAL} in this project. If you want to build this project with a different version of Xcode, please remove ${file} file\"\nelif ([ ${XCODE_VERSION_MAJOR_REQUIRED} != ${XCODE_VERSION_MAJOR} ] || [ ${XCODE_VERSION_MINOR_REQUIRED} != ${XCODE_VERSION_MINOR} ])\nthen\necho \"error: [SDOS error] - The required version of Xcode to run this project is ${XCODE_VERSION_MINOR_REQUIRED} and the current version of Xcode is ${XCODE_VERSION_MINOR}. If you want to build this project with a different version of Xcode, please remove ${file} file\"\nerror 0\nelif ([ ${XCODE_VERSION_ACTUAL_REQUIRED} != ${XCODE_VERSION_ACTUAL} ])\nthen\necho \"warning: [SDOS warning] - XCODE VERSION CONFLICT: The required version of Xcode to run this project is ${XCODE_VERSION_ACTUAL_REQUIRED} and the current version of Xcode is ${XCODE_VERSION_ACTUAL}. This might cause some problems at runtime.\"\nfi\n";
+		};
+		36FDA567AA31A195549115D9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SDOSStencilExample/Pods-SDOSStencilExample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SDOSStencilExample/Pods-SDOSStencilExample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SDOSStencilExample/Pods-SDOSStencilExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE7503DD23C7201A00F940B3 /* RealmFields */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = RealmFields;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Sourcery/bin/sourcery\" --sources \"SDOSStencil/RealmModels\" --templates \"../../src/Templates/Realm/RealmParser.stencil\" --output \"SDOSStencil/Generated/\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CEF389F823C5C20B00ADF8A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE7503DF23C7321700F940B3 /* Person.swift in Sources */,
+				CEF38A0423C5C20B00ADF8A5 /* ViewController.swift in Sources */,
+				CE7503D823C714C800F940B3 /* RealmFields.generated.swift in Sources */,
+				CEF38A0023C5C20B00ADF8A5 /* AppDelegate.swift in Sources */,
+				CEF38A1623C5C29F00ADF8A5 /* Dog.swift in Sources */,
+				CEF38A0223C5C20B00ADF8A5 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CEF38A0523C5C20B00ADF8A5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CEF38A0623C5C20B00ADF8A5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CEF38A0A23C5C20C00ADF8A5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CEF38A0B23C5C20C00ADF8A5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CE7503DB23C7200C00F940B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y5G9RYLF8Y;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CE7503DC23C7200C00F940B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y5G9RYLF8Y;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		CEF38A0E23C5C20C00ADF8A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CEF38A0F23C5C20C00ADF8A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CEF38A1123C5C20C00ADF8A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 710322B8DF060618BC79A668 /* Pods-SDOSStencilExample.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y5G9RYLF8Y;
+				INFOPLIST_FILE = SDOSStencil/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = es.sdos.SDOSStencil;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CEF38A1223C5C20C00ADF8A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E8BDFD85A8927FA4062147F /* Pods-SDOSStencilExample.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y5G9RYLF8Y;
+				INFOPLIST_FILE = SDOSStencil/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = es.sdos.SDOSStencil;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CE7503DA23C7200C00F940B3 /* Build configuration list for PBXAggregateTarget "RealmFields" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE7503DB23C7200C00F940B3 /* Debug */,
+				CE7503DC23C7200C00F940B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEF389F723C5C20B00ADF8A5 /* Build configuration list for PBXProject "SDOSStencilExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEF38A0E23C5C20C00ADF8A5 /* Debug */,
+				CEF38A0F23C5C20C00ADF8A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEF38A1023C5C20C00ADF8A5 /* Build configuration list for PBXNativeTarget "SDOSStencilExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEF38A1123C5C20C00ADF8A5 /* Debug */,
+				CEF38A1223C5C20C00ADF8A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CEF389F423C5C20B00ADF8A5 /* Project object */;
+}
