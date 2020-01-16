@@ -84,7 +84,7 @@ Cada `stencil` desarrolla sus propias plantillas en base a las que debe generar 
 
 
 La plantilla requiere que las clases de Realm cumplan las siguientes reglas (en formato stencil):
-```
+```js
     {% for type in types.classes|annotated:"RealmFields" %}
 ```
 Esto se traduce a lo siguiente:
@@ -92,7 +92,7 @@ Esto se traduce a lo siguiente:
   - Debe contener la anotación **`//sourcery:RealmFields`**. La anotación es un comentario justo encima de la declaración de la clase
 
 El siguiente ejemplo cumple las condiciones anteriores:
-```swift
+```js
 //sourcery:RealmFields
 class PersonRealm: Object {
 
@@ -114,7 +114,7 @@ Este `stencil` nos va a generar una carpeta dentro de la ruta indicada en el par
 
 Tiene esta estructura:
 
-```swift
+```js
 // MARK: - DogRealmAttributes
 extension DogRealm {
 	enum Attributes {
