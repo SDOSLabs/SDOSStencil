@@ -154,6 +154,7 @@
 			buildConfigurationList = CEF38A1023C5C20C00ADF8A5 /* Build configuration list for PBXNativeTarget "SDOSStencilExample" */;
 			buildPhases = (
 				0101DA3A5DA75A519832299F /* [CP] Check Pods Manifest.lock */,
+				29C0469F23D09880005A98A0 /* Xcode Version */,
 				CEF389F823C5C20B00ADF8A5 /* Sources */,
 				CEF389F923C5C20B00ADF8A5 /* Frameworks */,
 				CEF389FA23C5C20B00ADF8A5 /* Resources */,
@@ -240,6 +241,24 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		29C0469F23D09880005A98A0 /* Xcode Version */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Xcode Version";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "file=\"$SRCROOT/xcode-version.lock\"\n\n# create file if it does not exist\ntouch \"${file}\"\n\n# if file does not exist or it is not readable -> error\nif [ ! -r \"${file}\" ]\nthen\necho \"error: Could not create file: ${file} (see the Xcode Version script in Build Phases)\"\nerror -1\nfi\n# read the keys and values in the file\nwhile IFS='=' read -r key value\ndo\neval \"${key}='${value}'\"\ndone < \"${file}\"\n\n# if not defined the keys: XCODE_VERSION_MAJOR_REQUIRED, XCODE_VERSION_MINOR_REQUIRED, XCODE_VERSION_ACTUAL_REQUIRED\nif ([ -z ${XCODE_VERSION_MAJOR_REQUIRED:+\"1\"} ] || [ -z ${XCODE_VERSION_MINOR_REQUIRED:+\"1\"} ] || [ -z ${XCODE_VERSION_ACTUAL_REQUIRED:+\"1\"} ])\nthen\necho \"XCODE_VERSION_MAJOR_REQUIRED=${XCODE_VERSION_MAJOR}\" > \"${file}\"\necho \"XCODE_VERSION_MINOR_REQUIRED=${XCODE_VERSION_MINOR}\" >> \"${file}\"\necho \"XCODE_VERSION_ACTUAL_REQUIRED=${XCODE_VERSION_ACTUAL}\" >> \"${file}\"\n\necho \"warning: Required Xcode version set to ${XCODE_VERSION_ACTUAL} in this project. If you want to build this project with a different version of Xcode, please remove ${file} file\"\nelif ([ ${XCODE_VERSION_MAJOR_REQUIRED} != ${XCODE_VERSION_MAJOR} ] || [ ${XCODE_VERSION_MINOR_REQUIRED} != ${XCODE_VERSION_MINOR} ])\nthen\necho \"error: [SDOS error] - The required version of Xcode to run this project is ${XCODE_VERSION_MINOR_REQUIRED} and the current version of Xcode is ${XCODE_VERSION_MINOR}. If you want to build this project with a different version of Xcode, please remove ${file} file\"\nerror 0\nelif ([ ${XCODE_VERSION_ACTUAL_REQUIRED} != ${XCODE_VERSION_ACTUAL} ])\nthen\necho \"warning: [SDOS warning] - XCODE VERSION CONFLICT: The required version of Xcode to run this project is ${XCODE_VERSION_ACTUAL_REQUIRED} and the current version of Xcode is ${XCODE_VERSION_ACTUAL}. This might cause some problems at runtime.\"\nfi\n";
 		};
 		36FDA567AA31A195549115D9 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
