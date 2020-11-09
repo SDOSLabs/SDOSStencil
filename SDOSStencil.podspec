@@ -17,6 +17,6 @@ Pod::Spec.new do |spec|
 
   spec.preserve_paths = "src/Templates/**"
 
-  spec.dependency "Sourcery", "~> 0.17.0"
+  spec.dependency "Sourcery", "~> 1.0"
 
 end

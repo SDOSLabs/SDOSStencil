@@ -1,10 +1,11 @@
 - [SDOSStencil](#sdosstencil)
-  - [Introducción](#introducci%c3%b3n)
-  - [Instalación](#instalaci%c3%b3n)
+  - [Introducción](#introducción)
+  - [Instalación](#instalación)
     - [Cocoapods](#cocoapods)
-    - [Configuración](#configuraci%c3%b3n)
+    - [Swift Package Manager](#swift-package-manager)
+    - [Configuración](#configuración)
       - [Parametros del script](#parametros-del-script)
-  - [Cómo se usa](#c%c3%b3mo-se-usa)
+  - [Cómo se usa](#cómo-se-usa)
     - [RealmFields](#realmfields)
   - [Dependencias](#dependencias)
   - [Referencias](#referencias)
@@ -21,19 +22,35 @@ Se ha usado esta forma de generación ya que a veces es necesario generar cierto
 
 ### Cocoapods
 
-Usaremos [CocoaPods](https://cocoapods.org). Hay que añadir la dependencia y el source al `Podfile`:
+Usaremos [CocoaPods](https://cocoapods.org).
 
-**Source**:
-
+Añadir el "source" privado de SDOSLabs al `Podfile`. Añadir también el source público de cocoapods para poder seguir instalando dependencias desde éste:
 ```ruby
-source 'https://github.com/SDOSLabs/cocoapods-specs.git'
+source 'https://github.com/SDOSLabs/cocoapods-specs.git' #SDOSLabs source
+source 'https://github.com/CocoaPods/Specs.git' #Cocoapods source
 ```
 
-**Dependencia**:
-
+Añadir la dependencia al `Podfile`:
 ```ruby
-pod 'SDOSStencil', '~> 1.0.0'
+pod 'SDOSStencil', '~> 1.1.0' 
 ```
+
+### Swift Package Manager
+
+Esta librería la usaremos en la `Build Phase` de nuestro proyecto. El script de esta librería no se debe incluir en el binario de la aplicación y sólamente servirá para generar código. Para que podamos usarlo deberemos instalar la librería de la siguiente forma:
+
+1. Crearnos una dependencia local en nuestro proyecto. Para ello nuestro proyecto debe estar incluido en un `.xcworkspace`. Debemos pulsar el botón `+` situado en la parte inferior izquierda del Xcode y seleccionar la opción "New Swift Package...".
+2. Le pondremos el nombre "Autogenerate" al paquete.
+3. Añadiremos la dependencia de `SDOSStencil` en el `Package.swift`, sin necesidad de añadirlo al target:
+
+``` swift
+dependencies: [
+    .package(url: "https://github.com/SDOSLabs/SDOSStencil.git", .upToNextMajor(from: "1.1.0"))
+]
+```
+
+De esta forma tendremos una carpeta en la raiz de nuestro proyecto que se llamará "Autogenerate" que contendrá un fichero `Package.swift` que usaremos más adelante para ejecutar el script.
+
 
 ### Configuración
 
@@ -44,9 +61,20 @@ Vamos a crear un nuevo **target** en el proyecto para realizar un `Build` cada v
 3. (Opcional) Renombramos el script que nos ha creado por el nombre deseado. Ej: `RealmFields`
 4. Copiamos el siguiente script:
 
-```sh
+  **Si la instalación es con cocoapods**
+    ```sh
     "${SRCROOT}/Pods/Sourcery/bin/sourcery" --sources "<Path to input files>" --templates "${SRCROOT}/Pods/SDOSStencil/src/Templates/Realm/RealmParser.stencil" --output "<Path to output folder>"
-```
+    ```
+    **Si la instalación es con Swift Package Manager**
+    ```sh
+    if [ -d "${BUILD_DIR}/../../SourcePackages" ] ; then
+        SPM_CHECKOUT_DIR="${BUILD_DIR}/../../SourcePackages"
+        SPM_PATH="${SRCROOT}/Autogenerate"
+        TEMPLATES_PATH="$SPM_CHECKOUT_DIR/checkouts/SDOSStencil/src/Templates"
+
+        (cd $SPM_PATH && xcrun --sdk macosx swift run sourcery --sources "<Path to input files>" --templates "$TEMPLATES_PATH/Realm/RealmParser.stencil" --output "<Path to output folder>")
+    fi
+    ```
 
 - El parametro de `<Path to input files>` es la ruta de la carpeta que contiene nuestros ficheros de entrada, los que va a procesar para generar el codigo.
 - El parameteo de `<Path to output folder>` es la ruta de la carpeta donde se van a generar los ficheros autogenerados. Es muy **`IMPORTANTE`** que esta carpeta este creada en nuestro proyecto antes de ejecutar el script.
