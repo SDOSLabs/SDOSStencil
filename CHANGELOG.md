@@ -1,4 +1,4 @@
-## [HEAD]
+## [1.1.0 Support Swift Package Manager](https://github.com/SDOSLabs/SDOSStencil/tree/1.1.0)
 
 - Add support to Swift Package Manager
 
