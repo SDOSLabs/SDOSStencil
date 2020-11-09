@@ -4,9 +4,9 @@ PODS:
   - Realm/Headers (4.3.0)
   - RealmSwift (4.3.0):
     - Realm (= 4.3.0)
-  - SDOSStencil (0.0.1):
-    - Sourcery (~> 0.17.0)
-  - Sourcery (0.17.0)
+  - SDOSStencil (1.0.0):
+    - Sourcery (~> 1.0)
+  - Sourcery (1.0.0)
 
 DEPENDENCIES:
   - RealmSwift (= 4.3.0)
@@ -25,9 +25,9 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Realm: 9357c3589555793e1860a7104a7412bca4a48d99
   RealmSwift: 402f1e379a8ef82c635313037b043f0f06de880c
-  SDOSStencil: e48b97ff56c94831d3941c2214c23c34ba1bea17
-  Sourcery: 3ed61be7c8a1218fce349266139379dba477efe0
+  SDOSStencil: 2772b5033bb78ee89d64f835146eab4a190322ab
+  Sourcery: 928a146ea9b777fa64b0c6ce915c4128b4488cff
 
 PODFILE CHECKSUM: 8fff5e8184d14ad86a6608c5d1e78a1403912486
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.9.3
