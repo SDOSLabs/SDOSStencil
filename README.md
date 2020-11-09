@@ -164,7 +164,7 @@ extension PersonRealm {
 ```
 
 ## Dependencias
-* [Sourcery](https://github.com/krzysztofzablocki/Sourcery) - &gt;= 0.17.0
+* [Sourcery](https://github.com/krzysztofzablocki/Sourcery) - ~> 1.0
 
 ## Referencias
 * https://github.com/SDOSLabs/SDOSStencil
